@@ -10,7 +10,7 @@
 
     <div ng-app="app">
         <div ng-controller="ContactController as contact">
-            Hello, {{ vm.name }}! Your email is {{ vm.email }} and your phone number is {{ vm.phone }}
+            Hello, {{ contact.name }}! Your email is {{ contact.email }} and your phone number is {{ contact.phone }}
             <div ng-controller="StaffController as staff">
                 <button ng-click="contact.changeName()">Click to change contact name</button>
             </div>
