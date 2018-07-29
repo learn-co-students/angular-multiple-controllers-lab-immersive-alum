@@ -9,8 +9,17 @@
 <body>
 
     <div ng-app="app">
-        <div ng-controller="ContactController">
-            Hello, {{ name }}!
+        <div ng-controller="ContactController as contact">
+            <h1>Hello, {{ contact.name }}!</h1>
+            <h3>Email: {{ contact.email }}</h3>
+            <h3>Phone: {{ contact.phone }}</h3>
+            <button ng-click="contact.changeName()">Change Name</button>
+        </div>
+        <div ng-controller="StaffController as staff">
+          <h1>Hello, {{ staff.name }}!</h1>
+          <h3>Email: {{ staff.email }}</h3>
+          <h3>Phone: {{ staff.phone }}</h3>
+          <button ng-click="staff.changeName()">Change Name</button>
         </div>
     </div>
 
